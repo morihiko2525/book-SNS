@@ -11,5 +11,6 @@
     </head>
     <body>
         <p>IT WORKS!</p>
+        <?php print"a";?>
     </body>
 </html>
