@@ -18,5 +18,14 @@
           </div>
         </div>
         <?php print"a";?>
+        <?php 
+        $data = "https://www.googleapis.com/books/v1/volumes?q=死ぬこと以外";
+        $json = file_get_contents($data);
+        $json_decode = json_decode($json);
+        
+        // jsonデータ内の『entry』部分を複数取得して、postsに格納
+        $posts = $json_decode->items;
+        var_dump($posts);
+        ?>
     </body>
 </html>
